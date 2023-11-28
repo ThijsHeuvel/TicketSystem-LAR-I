@@ -19,12 +19,15 @@
     </head>
     <body>
         <header>
+        <span class="title">TicketShop</span>
             <nav>
-            
+                <a href="">Home</a>
+                <a href="">Events</a>
+                <a href="">Agenda</a>
             </nav>
         </header>
-        <main>
-            
+        <main class="wrapper">
+            <h1>Welkom op de TicketShop</h1>
         </main>
     </body>
 </html>

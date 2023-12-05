@@ -147,7 +147,31 @@ label{
 }
 
 .card{
-    background-color: lightgrey;
+    background-color: #90aeff;
+    border-radius: 15px;
     padding: 1rem;
     margin-bottom: 1rem;
 }
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    grid-auto-flow: dense;
+    grid-template-rows: auto;
+    grid-gap: 2%;
+  }
+  .ticketbutton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #0044ff;
+    border-radius: 5px;
+    border: 2px solid #0044ff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .ticketbutton:hover {
+    background-color: #2862ff;
+  }

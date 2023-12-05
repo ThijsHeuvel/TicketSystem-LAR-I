@@ -18,17 +18,18 @@
     <body>
         <div class="container">
             <h1>Aankomende Evenementen</h1>
-
-            @foreach ($events as $event)
-                <div class="card">
-                    <div class="card-body">
-                        <h2 class="card-title">{{ $event->name }}</h5>
-                        <p class="card-text">{{ $event->description }}</p>
-                        <p class="card-text"><b>Datum:</b> {{ $event->starts_at }}</p>
-                        <a href="#" class="btn btn-primary">Koop Tickets</a>
+            <div class="grid">
+                @foreach ($events as $event)
+                    <div class="card">
+                        <div class="card-body">
+                            <h2 class="card-title">{{ $event->name }}</h5>
+                            <p class="card-text">{{ $event->description }}</p>
+                            <p class="card-text"><b>Datum:</b> {{ $event->starts_at }}</p>
+                            <a href="#" class="btn btn-primary ticketbutton">Koop Tickets</a>
+                        </div>
                     </div>
-                </div>
-            @endforeach
+                @endforeach
+            </div>
         </div>
     </body>
 </html>

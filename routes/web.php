@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,21 +15,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+Route::get('/', [PagesController::class, 'home'])->name('home');
 
-Route::get('/home', function () {
-    return view('home');
-})->name('home');
+Route::get('/home', [PagesController::class, 'home'])->name('home');
 
-Route::get('/events', function () {
-    return view('events');
-})->name('events');
+Route::get('/events', [PagesController::class, 'events'])->name('events');
 
-Route::get('/schedule', function () {
-    return view('schedule');
-})->name('schedule');
+Route::get('/schedule', [PagesController::class, 'schedule'])->name('schedule');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

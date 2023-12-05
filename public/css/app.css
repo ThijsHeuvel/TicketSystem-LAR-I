@@ -106,7 +106,10 @@ nav a.active{
     text-decoration: underline;
 }
 
-
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+}
 img.logo{
     max-height: 45px;
     margin-left: 8px;
@@ -141,4 +144,10 @@ label{
 
 .form-control{
     min-width: 200px;
+}
+
+.card{
+    background-color: lightgrey;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }

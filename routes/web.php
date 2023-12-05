@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,7 @@ Route::get('/', [PagesController::class, 'home'])->name('home');
 
 Route::get('/home', [PagesController::class, 'home'])->name('home');
 
-Route::get('/events', [PagesController::class, 'events'])->name('events');
+Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 
 Route::get('/schedule', [PagesController::class, 'schedule'])->name('schedule');
 

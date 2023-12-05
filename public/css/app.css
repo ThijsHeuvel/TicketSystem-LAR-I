@@ -175,3 +175,24 @@ label{
   .ticketbutton:hover {
     background-color: #2862ff;
   }
+
+  .login-button {
+    display: inline-block;
+    padding: 5px 10px;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    transition: background-color 0.3s ease;
+    margin-left: 110%;
+  }
+  .login-button:hover {
+    color: #fff;
+    background-color: #0044ff;
+  }
+ .between {
+    display: flex;
+    justify-content: space-between;
+ }

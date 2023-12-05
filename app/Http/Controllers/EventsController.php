@@ -13,13 +13,10 @@ class EventsController extends Controller
     public function index()
     {
         $events = Event::all();
+
+        return view('dashboard.index')->with('events', $events);
     }
 
-    public function showEvents()
-    {
-        $events = Event::where('starts_at', '>', now())->get();// laat alleen de events zien die nog moeten komen
-        return view('pages/events')->with('events', $events);
-    }
 
     /**
      * Show the form for creating a new resource.

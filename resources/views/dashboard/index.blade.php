@@ -8,7 +8,7 @@
             <th>Location</th>
             <th>Starts at</th>
             <th>Price</th>
-            <th>&nbsp;</th>
+            <th>Aanpassen</th>
         </tr>
         @foreach ($events as $event)
             <tr>

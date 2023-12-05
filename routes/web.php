@@ -15,8 +15,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('base');
+    return view('home');
 });
+
+Route::get('/home', function () {
+    return view('home');
+})->name('home');
+
+Route::get('/events', function () {
+    return view('events');
+})->name('events');
+
+Route::get('/schedule', function () {
+    return view('schedule');
+})->name('schedule');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

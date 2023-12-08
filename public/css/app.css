@@ -234,3 +234,94 @@ label{
     color: #000000;
     background-color: #22ff00;
   }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-weight: bold;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .opslaanKnop{
+    font-size: medium;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #22ff00;
+    transition: background-color 0.3s ease;
+    padding: 4px;
+    width: 100%;
+  }
+  .opslaanKnop:hover {
+    color: #000000;
+    background-color: #22ff00;
+  }
+
+  .terugknop{
+    font-size: medium;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #0044ff;
+    transition: background-color 0.3s ease;
+    padding: 4px;
+    padding-left:5% ;
+    padding-right: 5%;
+    width: 100%;
+  }
+  .terugknop:hover {
+    color: #ffffff;
+    background-color: #0044ff;
+  }
+
+  .deleteknop {
+    font-weight: bold;
+    font-size: medium;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #ff0000;
+    transition: background-color 0.3s ease;
+    padding: 4px;
+    padding-left:5% ;
+    padding-right: 5%;
+    width: 100%;
+  }
+  .deleteknop:hover {
+    color: #ffffff;
+    background-color: #ff0000;
+  }
+  .editknop{
+    font-weight: 500;
+    font-size: medium;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #22ff00;
+    transition: background-color 0.3s ease;
+    padding: 4px;
+    padding-left:5% ;
+    padding-right: 5%;
+    width: 100%;
+  }
+  .editknop:hover {
+    color: #ffffff;
+    background-color: #22ff00;
+  }

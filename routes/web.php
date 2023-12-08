@@ -25,6 +25,7 @@ Route::get('/events', [PagesController::class, 'events'])->name('events');
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
     Route::resource('events', EventsController::class);
     Route::get('/events', [EventsController::class, 'index'])->name('events.index');
+    
     Route::post('/events', [EventsController::class, 'store'])->name('events.store');
     Route::get('/events/create', [EventsController::class, 'create'])->name('events.create');
     Route::get('/events/{id}', [EventsController::class, 'show'])->name('events.edit');

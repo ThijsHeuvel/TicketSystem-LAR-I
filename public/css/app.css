@@ -120,9 +120,25 @@ img.logo{
     margin-top: 1vh;
 }
 
+.adminbutton{
+    float:right !important
+}
+
 .table th{
     background-color: #0044ff;
     color: whitesmoke;
+}
+
+.backtoevents{
+    color: #2862ff;
+}
+
+.deletevent{
+    color: red;
+}
+
+.editevent{
+    color: green;
 }
 
 .table th, .table td{
@@ -135,8 +151,7 @@ img.logo{
 }
 
 .table tr:hover td{
-    background-color: #0044ff;
-    color: white;
+    background-color: darkgrey;
 }
 
 label{
@@ -147,7 +162,9 @@ label{
 .form-control{
     min-width: 200px;
 }
-
+.eventcontrolbuttons{
+    color: blue !important;
+}
 .card{
     background-color: #90aeff;
     border-radius: 15px;

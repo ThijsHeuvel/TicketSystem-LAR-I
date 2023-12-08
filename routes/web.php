@@ -24,6 +24,7 @@ Route::get('/home', [PagesController::class, 'home'])->name('home');
 Route::get('/events', [PagesController::class, 'events'])->name('events');
 
 Route::get('events/{id}/order', [TicketsController::class, 'order'])->middleware(['auth'])->name('events.orderticket');
+Route::post('events/{id}/order', [TicketsController::class, 'store'])->middleware(['auth'])->name('events.storeorderticket');
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){  // CRUD routes for events + Index
     Route::resource('events', EventsController::class);

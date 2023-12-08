@@ -16,6 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->unsignedBigInteger('user_id'); // foreign key
             $table->unsignedBigInteger('event_id'); // foreign key
+            $table->string('status')->default('pending');
+            $table->dateTime('order_date');
 
             $table->foreign('user_id')
                 ->references('id')

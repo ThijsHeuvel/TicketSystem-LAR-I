@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use app\Models\Ticket;
+use app\Models\Reservation;
 class TicketsController extends Controller
 {
 
@@ -37,9 +39,22 @@ class TicketsController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store($event_id, Request $request)
     {
-        //
+        $event = Event::findorFail($event_id);
+
+        $reservation = null;
+
+        $request->validate([
+            'amount' => 'required|numeric|min:1'
+        ]);
+
+        $reservation = new Reservation();
+        $reservation->user_id = \Auth::id();
+        $reservation->event_id = $event->id;
+        $reservation->status = 'paid';
+        $reservation->order_date = now();
+        $reservation->save();
     }
 
     /**

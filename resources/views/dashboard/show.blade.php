@@ -12,8 +12,14 @@
 
     <nav class="eventcontrolbuttons">
         <a href="{{ route('events.edit', $event->id) }}" class="editevent">Edit Event</a>
-        <a href="{{ route('events.delete', $event->id) }}" class="deletevent">Delete Event</a>
         <a href="{{ route('events.index') }}" class="backtoevents">Terug naar Evenementen</a>
     </nav>
+    <div class="eventcontrolbuttons">
+        <form action="{{ route('events.delete', $event->id) }}" method="POST">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="deletevent">Delete Event</button>
+        </form>
+    </div>
 </div>
 </div>

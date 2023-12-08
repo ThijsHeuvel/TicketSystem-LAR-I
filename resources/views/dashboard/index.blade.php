@@ -1,7 +1,7 @@
 @include('includes.header')
 <div class="container">
     <h1>Welcome op het Dashboard</h1>
-    <p>Je kan op naam van event drukken om hem aan te passen en op de create knop om er eentje aan te maken.</p>
+    <p>Je kan op naam van event drukken om meer details te zien en je kan hem daar vervolgens aanpassen en op de create knop om er eentje aan te maken.</p>
     <a class="createButton" href="{{ route('events.create') }}"><b>+ Create Event</b></a>
     <table class="table">
         <tr>

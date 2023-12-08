@@ -19,6 +19,8 @@
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('events') }}">Events</a>
         <a href="{{ route('schedule') }}">Agenda</a>
-        <a href="{{ route('events.index') }}">Admin Login</a>
+    </nav>
+    <nav>
+    <a class="login-button"href="{{ route('events.index') }}">Inloggen</a>
     </nav>
 </header>

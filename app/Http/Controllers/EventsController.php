@@ -23,7 +23,7 @@ class EventsController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.create');
     }
 
     /**
@@ -31,7 +31,27 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'location' => 'required',
+            'starts_at' => 'required',
+            'ends_at' => 'required',
+            'price' => 'required'
+        ]);
+
+        $event = new Event();
+        $event->name = $request->name;
+        $event->description = $request->description;
+        $event->location = $request->location;
+        $event->starts_at = $request->starts_at;
+        $event->ends_at = $request->ends_at;
+        $event->price = $request->price;
+
+        $event->save();
+
+        $events = Event::all();
+        return view('dashboard.index')->with('events', $events);
     }
 
     /**

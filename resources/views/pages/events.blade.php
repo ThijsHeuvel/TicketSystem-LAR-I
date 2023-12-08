@@ -25,7 +25,7 @@
                             <h2 class="card-title">{{ $event->name }}</h5>
                             <p class="card-text">{{ $event->description }}</p>
                             <p class="card-text"><b>Datum:</b> {{ $event->starts_at }}</p>
-                            <a href="#" class="btn btn-primary ticketbutton">Koop Tickets</a>
+                            <a href="{{ route('events.orderticket', $event->id) }}" class="btn btn-primary ticketbutton">Koop Tickets</a>
                         </div>
                     </div>
                 @endforeach

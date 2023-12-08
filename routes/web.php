@@ -3,6 +3,7 @@
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\TicketsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,7 +23,9 @@ Route::get('/home', [PagesController::class, 'home'])->name('home');
 
 Route::get('/events', [PagesController::class, 'events'])->name('events');
 
-Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
+Route::get('events/{id}/order', [TicketsController::class, 'order'])->middleware(['auth'])->name('events.orderticket');
+
+Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){  // CRUD routes for events + Index
     Route::resource('events', EventsController::class);
     Route::get('/events', [EventsController::class, 'index'])->name('events.index');
     

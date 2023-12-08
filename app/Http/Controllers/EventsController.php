@@ -69,7 +69,9 @@ class EventsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $event = Event::findOrFail($id);
+
+        return view('dashboard.edit')->with('event', $event);
     }
 
     /**
@@ -77,7 +79,27 @@ class EventsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'description' => 'required|min:10',
+            'location' => 'required',
+            'starts_at' => 'required|date',
+            'ends_at' => 'required|date',
+            'price' => 'required|numeric'
+        ]);
+
+        $event = Event::findOrFail($id);
+        $event->name = $request->name;
+        $event->description = $request->description;
+        $event->location = $request->location;
+        $event->starts_at = $request->starts_at;
+        $event->ends_at = $request->ends_at;
+        $event->price = $request->price;
+
+        $event->save();
+        
+        $events = Event::all();
+        return view('dashboard.index')->with('events', $events);
     }
 
     /**

@@ -28,8 +28,9 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){
     
     Route::post('/events', [EventsController::class, 'store'])->name('events.store');
     Route::get('/events/create', [EventsController::class, 'create'])->name('events.create');
-    Route::get('/events/{id}', [EventsController::class, 'show'])->name('events.edit');
-    Route::put('/events/{id}/edit', [EventsController::class, 'edit'])->name('events.update');
+    Route::get('/events/{id}', [EventsController::class, 'show'])->name('events.show');
+    Route::get('/events/{id}/edit', [EventsController::class, 'edit'])->name('events.edit');   
+    Route::put('/events/{id}/edit', [EventsController::class, 'update'])->name('events.update');
     Route::delete('/events/{id}', [EventsController::class, 'destroy'])->name('events.delete');
 });
 

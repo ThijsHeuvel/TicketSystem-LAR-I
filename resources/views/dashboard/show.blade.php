@@ -4,7 +4,7 @@
     <a href="{{ route('events.index') }}" class="backtoevents terugknop">Terug naar Evenementen</a>
     <hr>
    
-    <h2><b>{{ $event->name }}</b></h2>
+    <h2><b>Naam: </b>{{ $event->name }}</h2>
     <p><b>Beschrijving:</b> {{ $event->description }}</p>
     <p><b>Start:</b> {{ $event->starts_at }}</p>
     <p><b>Eind:</b> {{ $event->ends_at }}</p>

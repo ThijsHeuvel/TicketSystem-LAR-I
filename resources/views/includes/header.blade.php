@@ -13,7 +13,7 @@
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
-    <span class="title">TicketShop</span>
+    <a href="{{ route('home') }}" class="titlelink"><span class="title">TicketShop</span></a>
     <div class="between">
         <nav>
         <a href="{{ route('home') }}">Home</a>

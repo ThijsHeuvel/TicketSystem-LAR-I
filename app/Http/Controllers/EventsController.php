@@ -33,11 +33,11 @@ class EventsController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'description' => 'required',
+            'description' => 'required|min:10',
             'location' => 'required',
-            'starts_at' => 'required',
-            'ends_at' => 'required',
-            'price' => 'required'
+            'starts_at' => 'required|date',
+            'ends_at' => 'required|date',
+            'price' => 'required|numeric'
         ]);
 
         $event = new Event();

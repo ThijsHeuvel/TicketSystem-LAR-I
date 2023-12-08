@@ -122,6 +122,7 @@ img.logo{
 
 .table th{
     background-color: #0044ff;
+    color: whitesmoke;
 }
 
 .table th, .table td{
@@ -130,11 +131,12 @@ img.logo{
 
 .table tr:nth-child(odd) td
 {
-    background-color: #f0ece1;
+    background-color: #cedbff;
 }
 
 .table tr:hover td{
     background-color: #0044ff;
+    color: white;
 }
 
 label{

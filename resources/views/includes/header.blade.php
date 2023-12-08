@@ -14,7 +14,8 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     </head>
     <span class="title">TicketShop</span>
-    <nav>
+    <div class="between">
+        <nav>
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('events.index') }}">Events</a>
         <a href="{{ route('schedule') }}">Agenda</a>

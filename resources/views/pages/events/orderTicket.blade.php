@@ -9,6 +9,6 @@
             <label for="amount">Aantal tickets</label>
             <input type="number" id="amount" name="amount" class="form-control">
         </div>
-        <button type="submit">Bestellen</button>
+        <button class="oderknop" type="submit">Bestellen</button>
     </form>
 </div>

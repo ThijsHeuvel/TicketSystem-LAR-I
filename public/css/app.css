@@ -326,3 +326,23 @@ label{
     color: #ffffff;
     background-color: #22ff00;
   }
+
+  .oderknop{
+    font-weight: 500;
+    font-size: medium;
+    text-align: center;
+    color: #000000;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    border: 1px solid #22ff00;
+    transition: background-color 0.3s ease;
+    padding: 4px;
+    padding-left:5% ;
+    padding-right: 5%;
+    width: 100%;
+  }
+  .oderknop:hover {
+    color: #ffffff;
+    background-color: #22ff00;
+  }

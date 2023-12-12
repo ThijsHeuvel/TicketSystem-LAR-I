@@ -28,7 +28,7 @@ Route::post('events/{id}/order', [TicketsController::class, 'store'])->middlewar
 
 Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){  // CRUD routes for events + Index
     Route::resource('events', EventsController::class);
-    Route::get('/events', [EventsController::class, 'index'])->name('events.index');
+    Route::get('/', [EventsController::class, 'index'])->name('events.index');
     
     Route::post('/events', [EventsController::class, 'store'])->name('events.store');
     Route::get('/events/create', [EventsController::class, 'create'])->name('events.create');
@@ -37,9 +37,6 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){  // 
     Route::put('/events/{id}/edit', [EventsController::class, 'update'])->name('events.update');
     Route::delete('/events/{id}', [EventsController::class, 'destroy'])->name('events.delete');
 });
-
-
-
 
 
 

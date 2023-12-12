@@ -19,8 +19,17 @@
         <a href="{{ route('home') }}">Home</a>
         <a href="{{ route('events') }}">Events</a>
         <a href="{{ route('schedule') }}">Agenda</a>
-    </nav>
-    <nav>
-    <a class="login-button"href="{{ route('events.index') }}">Inloggen</a>
-    </nav>
+            @if (Auth::check())
+                <a href="{{ route('events.index') }}">BeheerPagina</a>
+            @endif
+         </nav>
+        <nav>
+        @if (Auth::check())
+        <a class="login-button" href="{{ route('logout') }}">
+        Welkom,{{ ucfirst(Auth::user()->name) }}! Uitloggen</a>
+        @else
+        <a class="login-button"href="{{ route('login') }}">Inloggen</a>
+        @endif
+        </nav>
+    </div>
 </header>

@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
-use App\Models\Ticket;
-use App\Models\Reservation;
-
+use app\Models\Ticket;
+use app\Models\Reservation;
 class TicketsController extends Controller
 {
 

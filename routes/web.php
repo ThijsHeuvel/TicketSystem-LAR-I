@@ -42,9 +42,12 @@ Route::group(['prefix' => 'dashboard', 'middleware' => 'auth'], function(){  // 
 
 Route::get('/schedule', [PagesController::class, 'schedule'])->name('schedule');
 
+Route::get('/logout', function () {
+    Auth::logout();
+    return redirect()->route('home');
+})->name('logout')->middleware('auth');
 
-
-Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(function () {   
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

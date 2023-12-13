@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Ticket;
 use App\Models\Reservation;
+use Illuminate\Support\Facades\Mail;
 class TicketsController extends Controller
 {
 
@@ -55,6 +56,11 @@ class TicketsController extends Controller
         $reservation->status = 'paid';
         $reservation->order_date = now();
         $reservation->save();
+
+        // Send confirmation email to user
+        $user_email = \Auth::user()->email;
+        // Mail::to($user_email)->send();
+        // Ik moet nog een mail template maken
     }
 
     /**
